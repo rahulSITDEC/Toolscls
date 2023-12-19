@@ -1,0 +1,27 @@
+package collections;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class Map_Prac {
+	public static void main(String[] args) {
+		
+	
+	Map<Integer,String> m = new LinkedHashMap<Integer,String>();
+	m.put(3, "Dhoni");
+	m.put(4, "Gambhir");
+	m.put(2, "Seeshanth");
+	m.put(1, "Kohli");
+	m.put(5, "Rohit");
+	
+	System.out.println("***********Keyvalues************");
+	System.out.println(m.keySet());
+	
+	System.out.println("****************ALL Values************");
+	System.out.println(m.values());
+	
+	System.out.println("***********Entry set***********");
+	System.out.println(m.entrySet());
+	
+}
+}

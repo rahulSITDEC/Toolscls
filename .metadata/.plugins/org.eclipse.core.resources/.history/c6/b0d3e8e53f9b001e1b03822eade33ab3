@@ -1,0 +1,43 @@
+package seleniumPrac1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Scrollupdown {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Driver\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.meesho.com");
+//		driver.findElement(By.xpath("//span[@role='button']")).click();
+		JavascriptExecutor j= (JavascriptExecutor)driver;
+//		j.executeScript("window.scrollTo(webb)");
+//		j.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+//		Thread.sleep(5000);
+//		Point webb = driver.findElement(By.xpath("//*[@id=\"ec175508-b07c-40f7-a09d-5dab28357145\"]/div[2]/div/ul/li[3]/span/a/img")).getLocation();
+//		j.executeScript("aruguments[0].scrollIntoView();",webb);
+		j.executeScript("window.scrollTo(0,1000)");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+}

@@ -1,0 +1,44 @@
+package seleniumPrac1;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class World_corona {
+	
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Driver\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.worldometers.info/coronavirus");
+		
+		int row = driver.findElements(By.xpath("//table[@id='main_table_countries_today']/tbody[1]/tr/td[2]")).size();
+		int column=driver.findElements(By.xpath("//table[@id='main_table_countries_today']/tbody[1]/tr[2]/td")).size();
+		List<WebElement> headerElements = driver.findElements(By.xpath("//table[@id='main_table_countries_today']/thead"));
+		System.out.println("**************HEADER**********************************");
+		for (WebElement webElement : headerElements) {
+			String text = webElement.getText();
+			text.replace("\n", "");
+			text.replace(",","");
+			System.out.print(text+"     ");
+		}
+//		for(int i=0;i<column;i++) {
+//			String element= headerElements.get(i).getText();
+//			element.replace("\n","");
+//			element.replace(",","");
+//			System.out.print(element);
+//		}
+		System.out.println("*********************************************************");
+		for(int i=0;i<row;i++) {
+			for(int j=0; j<column;j++) {
+			WebElement w=driver.findElement(By.xpath("//table[@id='main_table_countries_today']/tbody[1]/tr["+(i+1)+"]/td["+(j+1)+"]"));
+				System.out.print(w.getText()+"       ");
+			}System.out.println();
+		}
+		
+	}
+
+}

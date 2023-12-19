@@ -1,0 +1,20 @@
+package seleniumPrac1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Particularrow_column {
+	
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Driver\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.worldometers.info/coronavirus");
+		
+		
+	}
+	
+	
+
+}
