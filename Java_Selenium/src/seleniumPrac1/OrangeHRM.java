@@ -25,7 +25,9 @@ public class OrangeHRM {
 		driver.findElement(By.xpath("(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'])[2]")).click();
 	    driver.findElement(By.xpath("(//*[text()='Leave'])[1]")).click();
 	    driver.findElement(By.xpath("(//*[@placeholder='yyyy-mm-dd'])[1]")).sendKeys("2020-02-12");
-	    driver.findElement(By.xpath("(//*[@placeholder='yyyy-mm-dd'])[2]")).sendKeys("2020-02-30");                                                                                                                                                             
+	    driver.findElement(By.xpath("(//*[@placeholder='yyyy-mm-dd'])[2]")).sendKeys("2020-02-20");
+	    driver.findElement(By.xpath("(//*[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[1]")).click();
+	    
 	    
 	    
 		
